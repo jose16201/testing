@@ -1,0 +1,33 @@
+<%- model_class = Client -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:Nombre) %>:</strong></dt>
+  <dd><%= @client.Nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Apellido) %>:</strong></dt>
+  <dd><%= @client.Apellido %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:DNI) %>:</strong></dt>
+  <dd><%= @client.DNI %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Telefono) %>:</strong></dt>
+  <dd><%= @client.Telefono %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Direccion) %>:</strong></dt>
+  <dd><%= @client.Direccion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Correo) %>:</strong></dt>
+  <dd><%= @client.Correo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Usuario) %>:</strong></dt>
+  <dd><%= @client.Usuario %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Contrasenia) %>:</strong></dt>
+  <dd><%= @client.Contrasenia %></dd>
+</dl>
+
+<%= link_to t('.Regresar', :default => t("helpers.links.back")),
+              clients_path, :class => 'btn btn-default'  %>
+<%= link_to t('.Editar', :default => t("helpers.links.edit")),
+              edit_client_path(@client), :class => 'btn btn-default' %>
+<%= link_to t('.Eliminar', :default => t("helpers.links.destroy")),
+              client_path(@client),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estas seguro?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TaxiXpress - "Confianza y Seguridad"</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header">
+         
+  <p>&nbsp</p>
+	<h1><a href=<%= root_path %>><em>Taxi Xpress </em></a>	</h1>
+	<p class ="nvbar-text navbar-right">
+	      <% if current_user %>
+          Sesion de  <%= current_user.email %>
+           <%= " | " %>
+          <%= link_to "Consola", rails_admin_path %>
+        <% else %>
+          <%= link_to "", rails_admin_path %>
+        <% end %> 
+       </p>
+    <p>&nbsp</p>
+</div>
+
+<div style="clear:both"></div>
+<div id="content"><div class="inner_copy"></div>
+	<div><img src="<%= asset_path 'taxixpress.jpg' %>" alt="" /></div>
+	<div id="colOne">
+		<div id="menu1">
+			<ul>
+				<%= render 'layouts/menu' %> 
+			</ul>
+		</div>
+		<div class="margin-news">
+			<h2>&nbsp;</h2>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<div id="colTwo">
+	     <%= yield %>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="footer">
+	<div class="fleft"><p>Copyright InnovaSoft®.</p></div><div class="fright"><p>&nbsp;</p></div><div class="fclear"></div><div class="fcenter"><p>&nbsp;</p></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

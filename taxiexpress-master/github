@@ -1,0 +1,18 @@
+  
+  git remote add origin git@github.com:jose16201/taxixpress.git
+  git add .
+  git commit -am "Initial commit"
+  git push origin master
+  
+  Obtener repositorio
+  git clone git@github.com:jose16201/taxixpress.git
+  git remote add origin git@github.com:jose16201/taxixpress.git
+  git add .
+  git commit -am "Initial commit"
+  git push origin master
+  
+  Obtener repositorio
+  git clone git@github.com:jose16201/taxixpress.git
+  
+  sudo mysqldump -u root -p taxixpressapp_development > taxixpress.sql --- subir base de datos
+  sudo mysqldump -u root -p taxixpressapp_development < taxixpress.sql --- bajar base de datos

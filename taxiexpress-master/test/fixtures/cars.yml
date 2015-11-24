@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Marca: MyString
+  Modelo: MyString
+  Anio: 2015-11-23
+  Placa: MyString
+
+
+two:
+  Marca: MyString
+  Modelo: MyString
+  Anio: 2015-11-23
+  Placa: MyString
