@@ -6,7 +6,7 @@ class DriversController < ApplicationController
    
   
   def index
-    @drivers = Chofer.all
+    @drivers = Driver.all
   end
 
   # GET /drivers/1
@@ -16,7 +16,7 @@ class DriversController < ApplicationController
 
   # GET /drivers/new
   def new
-    @driver = Chofer.new
+    @driver = Driver.new
   end
 
   # GET /drivers/1/edit
@@ -26,11 +26,11 @@ class DriversController < ApplicationController
   # POST /drivers
   # POST /drivers.json
   def create
-    @driver = Chofer.new(driver_params)
+    @driver = Driver.new(driver_params)
 
     respond_to do |format|
       if @driver.save
-        format.html { redirect_to @driver, notice: 'Chofer was successfully created.' }
+        format.html { redirect_to @driver, notice: 'Driver was successfully created.' }
         format.json { render :show, status: :created, location: @driver }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class DriversController < ApplicationController
   def update
     respond_to do |format|
       if @driver.update(driver_params)
-        format.html { redirect_to @driver, notice: 'Chofer was successfully updated.' }
+        format.html { redirect_to @driver, notice: 'Driver was successfully updated.' }
         format.json { render :show, status: :ok, location: @driver }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class DriversController < ApplicationController
   def destroy
     @driver.destroy
     respond_to do |format|
-      format.html { redirect_to drivers_url, notice: 'Chofer was successfully destroyed.' }
+      format.html { redirect_to drivers_url, notice: 'Driver was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -66,7 +66,7 @@ class DriversController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_driver
-      @driver = Chofer.find(params[:id])
+      @driver = Driver.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

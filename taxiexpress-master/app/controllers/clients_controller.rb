@@ -61,6 +61,9 @@ class ClientsController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
@@ -69,6 +72,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:Nombre, :Apellido, :DNI, :Telefono, :Direccion, :Correo, :Usuario, :Contraseña)
+      params.require(:client).permit(:Nombre, :Apellido, :DNI, :Telefono, :Direccion, :Correo, :Usuario, :Contrasenia)
     end
 end
