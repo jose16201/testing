@@ -6,7 +6,6 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
   end
-
   # GET /cars/1
   # GET /cars/1.json
   def show
@@ -16,7 +15,6 @@ class CarsController < ApplicationController
   def new
     @car = Car.new
   end
-
   # GET /cars/1/edit
   def edit
   end
@@ -36,7 +34,6 @@ class CarsController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /cars/1
   # PATCH/PUT /cars/1.json
   def update
@@ -66,8 +63,6 @@ class CarsController < ApplicationController
     def set_car
       @car = Car.find(params[:id])
     end
-
-
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params

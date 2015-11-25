@@ -6,7 +6,9 @@ class HomeController < ApplicationController
   
   def contacto
   end
-  
+      
+      
+      
   
   def servicio
   end

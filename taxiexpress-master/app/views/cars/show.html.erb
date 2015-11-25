@@ -9,10 +9,13 @@
   <dt><strong><%= model_class.human_attribute_name(:Modelo) %>:</strong></dt>
   <dd><%= @car.Modelo %></dd>
   <dt><strong><%= model_class.human_attribute_name(:Anio) %>:</strong></dt>
-  <dd><%= @car.Anio %></dd>
+  <dd><%= @car.Anio%></dd>
   <dt><strong><%= model_class.human_attribute_name(:Placa) %>:</strong></dt>
   <dd><%= @car.Placa %></dd>
 </dl>
+
+
+
 
 <%= link_to t('.Regresar', :default => t("helpers.links.back")),
               cars_path, :class => 'btn btn-default'  %>

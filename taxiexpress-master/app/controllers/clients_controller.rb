@@ -11,7 +11,6 @@ class ClientsController < ApplicationController
   # GET /clients/1.json
   def show
   end
-
   # GET /clients/new
   def new
     @client = Client.new
@@ -60,9 +59,6 @@ class ClientsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
